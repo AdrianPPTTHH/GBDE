@@ -48,3 +48,8 @@ This guide provides detailed instructions for setting up and running the experim
 
 - **Execute Experiment Code**:  
   You can run the experiment using the `Run.ipynb` notebook.
+
+
+# Reference
+- TextFooler Implementation: [GitHub - TextFooler](https://github.com/jind11/TextFooler)
+
