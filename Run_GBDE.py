@@ -1795,7 +1795,6 @@ def main():
 
     log_file = open(os.path.join(args.output_dir, 'results_log'), 'a')
 
-    # 粒球攻击类
     if(os.path.exists("./Attacker/replace.npy")):
         replace_dict = np.load('./Attacker/replace.npy', allow_pickle=True).item()
     else:
@@ -1826,7 +1825,7 @@ def main():
                                             synonym_num=args.synonym_num,
                                             batch_size=args.batch_size)
         elif args.perturb_ratio == 15.:
-            # DE 粒球攻击
+            # GB+DE
             new_text, num_changed, orig_label, \
             new_label, num_queries, sim_score, delta_PPL = GBDE(text, true_label, predictor, PPL_metric, stop_words_set, 
                                                word2idx, idx2word, replace_dict, sim_predictor=use,
